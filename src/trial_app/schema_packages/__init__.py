@@ -15,3 +15,15 @@ schema_package_entry_point = NewSchemaPackageEntryPoint(
     name='NewSchemaPackage',
     description='New schema package entry point configuration.',
 )
+
+class ProvaEntryPoint(SchemaPackageEntryPoint):
+    def load(self):
+        from trial_app.schema_packages.fabrication_process import m_package
+
+        return m_package
+
+
+prova_entry_point = ProvaEntryPoint(
+    name='Prova',
+    description='Schema package for describing a fabrication process.',
+)

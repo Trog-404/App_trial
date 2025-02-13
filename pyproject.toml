@@ -77,7 +77,7 @@ select = [
     "UP",
     # isort
     "I",
-    # pylint 
+    # pylint
     "PL",
 ]
 
@@ -115,6 +115,7 @@ parser_entry_point = "trial_app.parsers:parser_entry_point"
 schema_package_entry_point = "trial_app.schema_packages:schema_package_entry_point"
 normalizer_entry_point = "trial_app.normalizers:normalizer_entry_point"
 app_entry_point = "trial_app.apps:app_entry_point"
+prova_entry_point = "trial_app.schema_packages:prova_entry_point"
 
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
