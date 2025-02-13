@@ -42,7 +42,7 @@ class FabricationStep(ProcessStep, EntryData):
         ),
     )
 
-class FabricationProcess(Process, EntryData):
+class FabricationProcess(Process, EntryData, ArchiveSection):
     m_def = Section()
     fabricationProductType = Quantity(
         type=str,
@@ -55,6 +55,6 @@ class FabricationProcess(Process, EntryData):
         ),
     )
     steps = SubSection(
-        section_def = ProcessStep,
+        section_def = FabricationStep,
         repeats = True
     )
