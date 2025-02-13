@@ -111,7 +111,6 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [project.entry-points.'nomad.plugin']
-parser_entry_point = "trial_app.parsers:parser_entry_point"
 schema_package_entry_point = "trial_app.schema_packages:schema_package_entry_point"
 normalizer_entry_point = "trial_app.normalizers:normalizer_entry_point"
 app_entry_point = "trial_app.apps:app_entry_point"
