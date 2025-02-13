@@ -19,13 +19,13 @@ if TYPE_CHECKING:
     from structlog.stdlib import (
         BoundLogger,
     )
-
+from nomad.datamodel.data import ArchiveSection, EntryData
 from nomad.datamodel.metainfo.annotations import ELNAnnotation
 from nomad.metainfo import Quantity, Section, SubSection
 from nomad.datamodel.metainfo.basesections import ProcessStep, Process
 
 
-class FabricationStep(ProcessStep):
+class FabricationStep(ProcessStep, EntryData):
     """
     Any dependant step of an `Activity`.
     """
@@ -42,7 +42,7 @@ class FabricationStep(ProcessStep):
         ),
     )
 
-class FabricationProcess(Process):
+class FabricationProcess(Process, EntryData):
     m_def = Section()
     fabricationProductType = Quantity(
         type=str,
