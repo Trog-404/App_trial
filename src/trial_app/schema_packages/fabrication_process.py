@@ -22,7 +22,7 @@ if TYPE_CHECKING:
 
 from nomad.datamodel.metainfo.annotations import ELNAnnotation
 from nomad.metainfo import Quantity, Section, SubSection
-from nomad.metainfo.basesections import ProcessStep, Process
+from nomad.datamodel.metainfo.basesections import ProcessStep, Process
 
 
 class FabricationStep(ProcessStep):
