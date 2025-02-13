@@ -55,6 +55,6 @@ class FabricationProcess(Process):
         ),
     )
     steps = SubSection(
-        section_def = FabricationProcess,
+        section_def = ProcessStep,
         repeats = True
     )
